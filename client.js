@@ -23,13 +23,13 @@ const connect = function() {
   })
     
 
-    conn.on('connect', () => {
+    // conn.on('connect', () => {
 
-      setInterval(() => {
-        conn.write("Move: up") // print out the words 
-      }, 50)
-    //add 1 second each time it loops again
-    })
+    //   setInterval(() => {
+    //     conn.write("Move: up") // print out the words 
+    //   }, 50)
+
+    // })
     
 
 
