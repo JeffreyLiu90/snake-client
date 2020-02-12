@@ -11,12 +11,20 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
-  return conn;
-}
+  conn.on('connect', () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: SJL")
+  })
 
-console.log('Connecting ...');
-connect();
+  return conn;
+  }
+
+
+// connect();
 
 
 module.exports = connect
 
+// conn.on('connect', () => {
+//   conn.write('Hello from Jeff!');
+// });
